@@ -5,13 +5,14 @@ import { ThemeProvider } from "styled-components";
 import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
 import DashBoard from "./pages/DashBoard";
+import List from "./pages/List";
 
 const App: React.FC = () => {
     return (
         <ThemeProvider theme={dark}>
             <GlobalStyles />
             <Layout>
-                <DashBoard></DashBoard>
+                <List></List>
             </Layout>
         </ThemeProvider>
     )
