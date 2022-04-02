@@ -32,13 +32,19 @@ const List: React.FC = () => {
             </ContentHeader>
 
             <ContentBody>
-                <FinancialRecord 
-                    cardColor="#313832"
-                    tagColor="#E44C4E"
-                    title="Aluguel"
-                    subtitle="02/04/2022"
-                    amount="R$ 1500,00"
-                />
+                {
+                    [...Array(1000)].map(() =>
+                     
+                    <FinancialRecord 
+                        cardColor="#313832"
+                        tagColor="#E44C4E"
+                        title="Aluguel"
+                        subtitle="02/04/2022"
+                        amount="R$ 1500,00"
+                    />
+                    )
+                    
+                }
             </ContentBody>
 
         </Container>
