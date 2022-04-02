@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, ContentBody } from "./styles"
+import { Container, ContentBody, Filters } from "./styles"
 import ContentHeader from "../../components/ContentHeader";
 import SelectInput from "../../components/SelectInput";
 import FinancialRecord from "../../components/FInancialRecord";
@@ -10,26 +10,50 @@ import FinancialRecord from "../../components/FInancialRecord";
  */
 const List: React.FC = () => {
     
-    const options = [{
-        value: 'Lorem',
-        label: 'Ipsum'
+    const months = [{
+        value: '1',
+        label: 'Janeiro'
     },
     {
-        value: 'safrgrg',
-        label: 'AAAAAAA'
+        value: '2',
+        label: 'Fevereiro'
     },
     {
-        value: 'FUCK',
-        label: 'you'
+        value: '3',
+        label: 'Março'
     }];
+
+    const years = [{
+        value: '2022',
+        label: '2022'
+    },
+    {
+        value: '2021',
+        label: '2021'
+    },
+    {
+        value: '2020',
+        label: '2020'
+    }];
+
 
     return (
         <Container>
             <ContentHeader title="List" lineColor="#ffffff">
-                <SelectInput options={options}>
+                <SelectInput options={months}>
 
                 </SelectInput>
+                <SelectInput options={years}></SelectInput>
             </ContentHeader>
+
+            <Filters>
+                <button type="button" className="tag-filter recurrent">
+                    Recorrentes
+                </button>
+                <button type="button" className="tag-filter eventual">
+                    Eventuais
+                </button>
+            </Filters>
 
             <ContentBody>
                 {
