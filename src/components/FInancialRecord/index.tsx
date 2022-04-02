@@ -3,7 +3,6 @@ import React from "react";
 import { Container, Tag } from "./styles";
 
 interface FinancialRecordProps {
-    cardColor: string;
     tagColor: string;
     title: string;
     subtitle: string;
@@ -11,10 +10,10 @@ interface FinancialRecordProps {
 }
 
 const FinancialRecord: React.FC<FinancialRecordProps> = ({
-    cardColor, tagColor, title, subtitle, amount
+    tagColor, title, subtitle, amount
 }) => {
     return ( 
-        <Container color={cardColor}>
+        <Container>
             <Tag color={tagColor} />
             <div>
                 <span>{title}</span>

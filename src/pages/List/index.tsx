@@ -36,7 +36,6 @@ const List: React.FC = () => {
                     [...Array(1000)].map(() =>
                      
                     <FinancialRecord 
-                        cardColor="#313832"
                         tagColor="#E44C4E"
                         title="Aluguel"
                         subtitle="02/04/2022"
