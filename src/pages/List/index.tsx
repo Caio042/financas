@@ -1,15 +1,35 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 import { Container, ContentBody, Filters } from "./styles"
 import ContentHeader from "../../components/ContentHeader";
 import SelectInput from "../../components/SelectInput";
 import FinancialRecord from "../../components/FInancialRecord";
+import { useParams } from "react-router-dom";
+
+/*interface RouteParams {
+    match: {
+        params: {
+            type: string;
+        }
+    }
+}*/
 
 /**
  * Functional Component
  */
 const List: React.FC = () => {
     
+    
+    let { type } = useParams();
+
+    const title = useMemo(() => {
+        return type === 'income' ? 'Entradas' : 'Saídas';
+
+    }, [type]);
+    const lineColor = useMemo(() => {
+        return type === 'income' ? '#F7931B': '#E44C4E';
+    },[type]);
+
     const months = [{
         value: '1',
         label: 'Janeiro'
@@ -39,7 +59,7 @@ const List: React.FC = () => {
 
     return (
         <Container>
-            <ContentHeader title="List" lineColor="#ffffff">
+            <ContentHeader title={title} lineColor={lineColor}>
                 <SelectInput options={months}>
 
                 </SelectInput>

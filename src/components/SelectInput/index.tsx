@@ -13,9 +13,13 @@ interface SelectInputProps {
 const SelectInput: React.FC<SelectInputProps> = ({options}) => {
     return(
         <Container>
-            <select name="" id="">
+            <select>
                 {
-                    options.map(option => (<option value={option.value}>{option.label} </option>))
+                    options.map(option => (<option 
+                        key={option.value}
+                        value={option.value}>
+                            {option.label} 
+                        </option>))
                 }
             </select>
         </Container>

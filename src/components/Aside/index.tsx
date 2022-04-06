@@ -15,9 +15,9 @@ const Aside: React.FC = () => {
             </Header>
 
             <Menu>
-                <MenuItemLink href="#"> <MdDashboard /> DashBoard</MenuItemLink>
-                <MenuItemLink href="#"> <AiOutlineArrowUp /> Entradas</MenuItemLink>
-                <MenuItemLink href="#"><AiOutlineArrowDown /> Saídas</MenuItemLink>
+                <MenuItemLink href="/dashboard"> <MdDashboard /> DashBoard</MenuItemLink>
+                <MenuItemLink href="/list/income"> <AiOutlineArrowUp /> Entradas</MenuItemLink>
+                <MenuItemLink href="/list/expense"> <AiOutlineArrowDown /> Saídas</MenuItemLink>
                 <MenuItemLink href="#"> <ImExit /> Sair</MenuItemLink>
             </Menu>
         </Container>
