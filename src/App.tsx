@@ -8,7 +8,7 @@ import dark from "./styles/themes/dark";
 
 const App: React.FC = () => {
     return (
-        <ThemeProvider theme={dark}>
+        <ThemeProvider theme={light}>
             <GlobalStyles />
             <Routes />
         </ThemeProvider>
